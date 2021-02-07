@@ -1,14 +1,11 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from './store/constants/user';
 import { getWeb3Instance, isMetaMaskInstalled } from './services/web3';
 import { withRouter } from 'react-router-dom';
-import InstallMetameask from './components/Base/InstallMetamask';
+import InstallMetameask from './components/common/install-metamask';
 import BigNumber from 'bignumber.js';
-import _ from 'lodash';
 BigNumber.config({ EXPONENTIAL_AT: 50 });
-
-const NETWORK_ID = process.env.REACT_APP_NETWORK_ID as string;
 
 const AppContainer = (props: any) => {
   const dispatch = useDispatch();
@@ -16,15 +13,6 @@ const AppContainer = (props: any) => {
   const onLoginWithoutLoginPage = async () => {
     if (isMetaMaskInstalled()) {
       const { history } = props;
-      const windowObj = window as any;
-      const currentNetworkId = _.get(windowObj, 'ethereum.networkVersion', '');
-      if (currentNetworkId && currentNetworkId !== NETWORK_ID) {
-        if (history) {
-          history.push('/network-change');
-        }
-        return;
-      }
-      const pathname = _.get(history, 'location.pathname', '');
 
       const web3Instance = getWeb3Instance();
       if (web3Instance) {
@@ -34,9 +22,6 @@ const AppContainer = (props: any) => {
             type: userActions.USER_LOGIN_SUCCESS,
             payload: accounts[0]
           });
-          if (pathname === '/network-change') {
-            history.push('/');
-          }
         } else {
           dispatch({
             type: userActions.USER_LOGIN_SUCCESS,
@@ -69,17 +54,6 @@ const AppContainer = (props: any) => {
           dispatch({
             type: userActions.USER_LOGOUT,
           });
-        }
-      });
-
-      ethereum.on('networkChanged', (newNetworkId: string) => {
-        const { history } = props;
-        if (NETWORK_ID !== newNetworkId) {
-          if (history) {
-            history.push('/network-change');
-          }
-        } else {
-          onLoginWithoutLoginPage();
         }
       });
     }
