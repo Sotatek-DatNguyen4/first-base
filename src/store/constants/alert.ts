@@ -7,5 +7,5 @@ export const alertActions = {
   SUCCESS_MESSAGE,
   WARNING_MESSAGE,
   ERROR_MESSAGE,
-  CLEAR_MESSAGE
-}
+  CLEAR_MESSAGE,
+};

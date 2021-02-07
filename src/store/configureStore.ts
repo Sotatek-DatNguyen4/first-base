@@ -19,7 +19,7 @@ const middlewares = [thunk];
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['campaigns', 'campaignCreate',  'campaignDetail', 'alert', 'campaignICORegister', 'transactionCampaign', 'transactionCampaign', 'affiliateCampaign', 'campaignAffiliateCreate', 'affiliateLinkGenerate', 'campaignErc20RateSet', 'campaignLatest', 'tokensByUser', 'tokenCreateByUser', 'campaignEdit', 'campaignStatusToggle', 'campaignRefundTokens', 'settingDeactivate'],
+  blacklist: [],
   whitelist: ['user'],
 };
 
