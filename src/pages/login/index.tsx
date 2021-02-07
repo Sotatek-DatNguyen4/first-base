@@ -5,9 +5,8 @@ import Container from '@material-ui/core/Container';
 import useStyles from './style';
 import { withRouter } from 'react-router-dom';
 import Button from '../../components/common/button';
-
-const loginLogo = '/images/login-logo.png';
-const metamskLogo = '/images/metamask-logo.png';
+import loginLogo from '../../assets/images/login-logo.png';
+import metamskLogo from '../../assets/images/metamask-logo.png';
 
 const Login: React.FC<any> = (props: any) => {
   const classes = useStyles();
