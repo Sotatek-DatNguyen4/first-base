@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
+import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { clearAlert } from './store/actions/alert'
 import ErrorPage from './pages/ErrorPage';
