@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { clearAlert } from './store/actions/alert';
-import ErrorPage from './pages/ErrorPage';
-import NotFoundPage from './pages/NotFoundPage';
+import Error from './pages/error';
+import NotFound from './pages/not-found';
 import ErrorBoundary from './components/Base/ErrorBoundary';
-import HomePage from './pages/HomePage/Index';
-import Login from './pages/Login';
+import Home from './pages/home';
+import Login from './pages/login';
 
 //@ts-ignore
 import { NotificationContainer, NotificationManager } from 'react-notifications'
@@ -39,10 +39,10 @@ const Routes: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
   return (
     <div>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/error" component={ErrorPage} />
+        <Route exact path="/" component={Home} />
+        <Route path="/error" component={Error} />
         <Route path="/login" component={Login} />
-        <Route component={NotFoundPage} />
+        <Route component={NotFound} />
       </Switch>
     </div>
   )
