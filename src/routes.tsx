@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearAlert } from './store/actions/alert';
 import Error from './pages/error';
 import NotFound from './pages/not-found';
-import ErrorBoundary from './components/Base/ErrorBoundary';
+import ErrorBoundary from './components/common/error-boundary';
 import Home from './pages/home';
 import Login from './pages/login';
 

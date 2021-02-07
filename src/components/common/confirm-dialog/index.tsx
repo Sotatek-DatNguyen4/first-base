@@ -6,7 +6,7 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import { CircularProgress } from '@material-ui/core';
 
-import Transition from '../Transition';
+import Transition from '../transition';
 import useStyles from './style';
 
 

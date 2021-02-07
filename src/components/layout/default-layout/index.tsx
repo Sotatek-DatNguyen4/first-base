@@ -1,6 +1,6 @@
 import React from 'react';
-import RightDefaultLayout from '../../Base/RightDefaultLayout';
-import LeftDefaultLayout from '../../Base/LeftDefaultLayout';
+import LeftDefaultLayout from '../left-default-layout';
+import RightDefaultLayout from '../right-default-layout';
 import { useCommonStyle } from '../../../styles';
 
 const DefaultLayout = (props: any) => {

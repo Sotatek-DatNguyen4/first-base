@@ -6,9 +6,11 @@ export const getWeb3Instance = () => {
   if (ethereum && ethereum.isMetaMask) {
     return new Web3(ethereum);
   }
+
   if (web3) {
     return new Web3(web3.currentProvider);
   }
+
   return null;
 };
 
@@ -52,7 +54,7 @@ export const convertToWei = (value: any, unit = 'ether') => {
 
 export const isValidAddress = (address: string) => {
   return Web3.utils.isAddress(address);
-}
+};
 
 export const getETHBalance = async (loginUser: string) => {
   const web3 = getWeb3Instance() as any;
@@ -60,7 +62,7 @@ export const getETHBalance = async (loginUser: string) => {
     const balance = await web3.eth.getBalance(loginUser);
 
     return web3.utils.fromWei(balance);
-  };
+  }
 
   return 0;
-}
+};

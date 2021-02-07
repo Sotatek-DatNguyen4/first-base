@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { userActions } from './store/constants/user';
 import { getWeb3Instance, isMetaMaskInstalled } from './services/web3';
 import { withRouter } from 'react-router-dom';
-import InstallMetameask from './components/Base/InstallMetamask';
+import InstallMetameask from './components/common/install-metamask';
 import BigNumber from 'bignumber.js';
 BigNumber.config({ EXPONENTIAL_AT: 50 });
 

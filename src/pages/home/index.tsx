@@ -1,11 +1,11 @@
 import React from 'react';
-import DefaultLayout from '../../components/Layout/DefaultLayout';
+import Index from '../../components/layout/default-layout';
 
 const Home = () => {
   return (
-    <DefaultLayout>
+    <Index>
       <div>Home page</div>
-    </DefaultLayout>
+    </Index>
   );
 };
 

@@ -4,7 +4,7 @@ import { login } from '../../store/actions/user';
 import Container from '@material-ui/core/Container';
 import useStyles from './style';
 import { withRouter } from 'react-router-dom';
-import Button from '../../components/Base/Button';
+import Button from '../../components/common/button';
 
 const loginLogo = '/images/login-logo.png';
 const metamskLogo = '/images/metamask-logo.png';
