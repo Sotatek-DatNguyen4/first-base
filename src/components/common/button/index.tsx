@@ -1,6 +1,6 @@
 import React from 'react';
-import useStyles from './style';
-import CircularProgress from "@material-ui/core/CircularProgress/CircularProgress";
+import CircularProgress from '@material-ui/core/CircularProgress/CircularProgress';
+import './style.scss';
 
 const Button = (props: any) => {
   const {
@@ -10,9 +10,7 @@ const Button = (props: any) => {
     loading = false,
     ...remainProps
   } = props;
-
-  const classes = useStyles();
-  const mainClass = classes.button;
+  const mainClass = 'button';
 
   return (
     <button

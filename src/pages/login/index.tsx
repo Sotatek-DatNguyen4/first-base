@@ -39,7 +39,7 @@ const Login: React.FC<any> = (props: any) => {
             label="Login with Metamask"
             loading={loading}
             disabled={loading}
-            buttonType="metamask"
+            buttonType="primary"
             className="login__button"
           />
           <div className="login_logo-metamask">
