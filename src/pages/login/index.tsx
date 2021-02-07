@@ -2,14 +2,14 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { login } from '../../store/actions/user';
 import Container from '@material-ui/core/Container';
-import useStyles from './style';
 import { withRouter } from 'react-router-dom';
 import Button from '../../components/common/button';
 import loginLogo from '../../assets/images/login-logo.png';
 import metamskLogo from '../../assets/images/metamask-logo.png';
 
+import './style.scss';
+
 const Login: React.FC<any> = (props: any) => {
-  const classes = useStyles();
   const dispatch = useDispatch();
   const { data = '', loading = false } = useSelector((state: any) => state.user);
 
@@ -26,7 +26,7 @@ const Login: React.FC<any> = (props: any) => {
 
   return (
     <Container fixed>
-      <div className={classes.login}>
+      <div className="login">
         <div className="login__wrap">
           <div className="login__logo">
             <img src={loginLogo} alt="login-logo" />
@@ -34,9 +34,6 @@ const Login: React.FC<any> = (props: any) => {
           <h2 className="login__title">
             Lemonade Login
           </h2>
-          <div className="login__description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </div>
           <Button
             onClick={handleUserLogin}
             label="Login with Metamask"

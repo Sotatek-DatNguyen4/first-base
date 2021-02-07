@@ -9,7 +9,7 @@ import Home from './pages/home';
 import Login from './pages/login';
 
 //@ts-ignore
-import { NotificationContainer, NotificationManager } from 'react-notifications'
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import AppContainer from './AppContainer';
 
