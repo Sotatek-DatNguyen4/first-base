@@ -1,17 +1,14 @@
 import React from 'react';
-import useStyles from './style';
-const metamskLogo = '/images/metamask-logo.png';
+import metamskLogo from '../../../assets/images/metamask-logo.png';
 
-const InstallMetameask = (props: any) => {
-  const classes = useStyles();
-  const mainClass = classes.installMetameask;
+const InstallMetameask = () => {
   return (
-    <div className={mainClass}>
-      <div className={`${mainClass}__wrap`}>
-        <div className={`${mainClass}__title`}>
+    <div className="install-metameask">
+      <div className="install-metameask__wrap">
+        <div className="install-metameask__title">
           Please install metamask extension
         </div>
-        <div className={`${mainClass}__metamask-logo`}>
+        <div className="install-metameask__metamask-logo">
           <img src={metamskLogo} alt="logo-metamask" />
         </div>
       </div>

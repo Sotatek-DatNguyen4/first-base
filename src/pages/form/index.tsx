@@ -1,12 +1,12 @@
 import React from 'react';
 import DefaultLayout from '../../components/layout/default-layout';
 
-const NotFound = () => {
+const Home = () => {
   return (
     <DefaultLayout>
-      NotFound Page
+      <div className="form-page">Form page</div>
     </DefaultLayout>
   );
 };
 
-export default NotFound;
+export default Home;

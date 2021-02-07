@@ -1,0 +1,19 @@
+.login {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  &__wrap {
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+  }
+  &__title {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 20px;
+  }
+  &__button {
+    margin-bottom: 20px;
+  }
+}

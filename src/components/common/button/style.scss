@@ -1,0 +1,53 @@
+@import '../../../styles/varibales.scss';
+
+.button {
+  width: 100%;
+  border: 0;
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  outline: none;
+  font-size: 14px;
+  max-width: 100%;
+  box-shadow: 0 0 15px rgba(243, 203, 25, 0.3);
+  align-items: center;
+  font-weight: 500;
+  border-radius: 8px;
+  justify-content: center;
+  background-color: #fff;
+
+  &__loading {
+    margin-left: 10px;
+    svg {
+      color: #fff;
+    }
+  }
+
+  &:hover {
+    background-color: $primary_color;
+    transition: all ease 1s;
+  }
+
+  &--primary {
+    color: #fff;
+    background-color: $primary_color;
+
+    &:hover {
+      background-color: $secondary_color;
+    }
+  }
+  &--secondary {
+    color: #fff;
+    background-color: $secondary_color;
+    &:hover {
+      background-color: $primary_color;
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: gray;
+    &:hover {
+      background-color: gray;
+    }
+  }
+}

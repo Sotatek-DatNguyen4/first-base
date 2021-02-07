@@ -1,0 +1,16 @@
+.install-metameask {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__wrap {
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+  },
+  &__title {
+    color: red;
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+}
