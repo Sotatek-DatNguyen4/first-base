@@ -1,36 +1,35 @@
 import React from 'react';
 import NavLeft from './NavLeft';
 import Button from '@material-ui/core/Button';
-import useStyles from './styles';
+import './styles';
 
 const LeftDefaultLayout = (props: any) => {
-  const styles = useStyles();
   const [smallLeft, setSmallLeft] = React.useState(false);
 
   return (
-    <div className={styles.leftLayout + ' ' + (smallLeft && styles.smallLeft)}>
-      <div className={styles.headLeft}>
-        <div className={styles.BoxInfoUser}>
-          <img className={styles.avatar} src={'/images/avatar.svg'} alt="" />
+    <div className="left-default-layout">
+      <div className="left-default-layout__header">
+        <div className="left-default-layout__user">
+          <img className="left-default-layout__user-avatar" src={'/images/avatar.svg'} alt="avatar" />
           {
             !smallLeft && 
-            <div className={styles.infoUser}>
+            <div className="left-default-layout__infoUser">
               <div className="name">Alan Cooper</div>
               <div className="status">
                 Verified Profile
-                <img className="icon" src={'/images/icon-verified.svg'} alt="" />
+                <img className="icon" src={'/images/icon-verified.svg'} alt="profile" />
               </div>
             </div>
           }
         </div>
-        <Button className={styles.btnSmallBig + ' ' + (smallLeft && 'btnSmall')} onClick={() => setSmallLeft(!smallLeft)}></Button>
+        <Button onClick={() => setSmallLeft(!smallLeft)} />
       </div>
-      <NavLeft smallLeft={smallLeft}/>
 
-      {
-        !smallLeft &&
-        <div className={styles.Copyright}>Copyright @Lemonade 2021. All rights reserved.</div>
-      }
+      <NavLeft smallLeft={smallLeft} />
+
+      {!smallLeft && (
+        <div className="left-default-layout__copyright">Copyright @Lemonade 2021. All rights reserved.</div>
+      )}
     </div>
   );
 };
