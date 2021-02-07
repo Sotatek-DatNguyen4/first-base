@@ -7,6 +7,7 @@ import NotFound from './pages/not-found';
 import ErrorBoundary from './components/common/error-boundary';
 import Home from './pages/home';
 import Login from './pages/login';
+import Form from './pages/form';
 
 //@ts-ignore
 import { NotificationContainer, NotificationManager } from 'react-notifications';
@@ -42,6 +43,7 @@ const Routes: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
         <Route exact path="/" component={Home} />
         <Route path="/error" component={Error} />
         <Route path="/login" component={Login} />
+        <Route path="/form" component={Form} />
         <Route component={NotFound} />
       </Switch>
     </div>

@@ -1,0 +1,22 @@
+.default-layout {
+  display: flex;
+  &__left {
+    color: #8D8D8D;
+    flex: 0 0 300px;
+    max-width: 300px;
+    padding: 20px 14px;
+    position: relative;
+    background: #202020;
+    min-height: 100vh;
+
+    .copyright {
+      position: absolute;
+      left: 0;
+      bottom: 16px;
+      width: 100%;
+    }
+  }
+  &__right {
+    padding: 20px;
+  }
+}

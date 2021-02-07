@@ -1,13 +1,13 @@
 import React from 'react';
-import LeftDefaultLayout from '../left-default-layout';
-import RightDefaultLayout from '../right-default-layout';
+import Left from './left';
+import Right from './right';
+import './style.scss';
 
 const DefaultLayout = (props: any) => {
-
   return (
     <div className="default-layout">
-      <LeftDefaultLayout />
-      <RightDefaultLayout>{props.children}</RightDefaultLayout>
+      <Left />
+      <Right>{props.children}</Right>
     </div>
   );
 };
