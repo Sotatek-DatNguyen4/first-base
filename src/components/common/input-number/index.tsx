@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.scss';
 
 const ARROW_LEFT_KEY_CODE = 37;
 const ARROW_RIGHT_KEY_CODE = 39;
