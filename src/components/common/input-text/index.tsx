@@ -8,14 +8,23 @@ const InputText = (props: any) => {
     name = '',
     className = '',
     onChange,
+    onBlur,
     placeholder = '',
     error = '',
+    ...rest
   } = props;
 
   const onValueChange = (event: any) => {
     const value = event.target.value;
     if (typeof onChange === 'function') {
       onChange(value);
+    }
+  };
+
+  const onBlurChange = (event: any) => {
+    const value = event.target.value;
+    if (typeof onBlur === 'function') {
+      onBlur(value);
     }
   };
 
@@ -33,7 +42,9 @@ const InputText = (props: any) => {
         type="text"
         ref={register}
         onChange={onValueChange}
+        onBlur={onBlurChange}
         placeholder={placeholder}
+        {...rest}
       />
       {error && (
         <div className={`${mainClass}__error`}>
