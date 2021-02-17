@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { userActions } from './store/constants/user';
-import { getWeb3Instance, isMetaMaskInstalled } from './services/web3';
+import { getWeb3Instance, isMetaMaskInstalled } from './blockchain/web3';
 import { withRouter } from 'react-router-dom';
 import InstallMetameask from './components/common/install-metamask';
 import BigNumber from 'bignumber.js';
