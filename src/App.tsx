@@ -1,5 +1,5 @@
 import React from 'react';
-import createRoutes from './routes';
+import createRoutes from './routes/index';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';

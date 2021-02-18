@@ -1,22 +1,19 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch, withRouter, RouteComponentProps } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearAlert } from './store/actions/alert';
-import Error from './pages/error';
-import NotFound from './pages/not-found';
-import ErrorBoundary from './components/common/error-boundary';
-import Home from './pages/home';
-import Login from './pages/login';
-import Form from './pages/form';
+import { clearAlert } from '../store/actions/alert';
+import Error from '../pages/error';
+import NotFound from '../pages/not-found';
+import ErrorBoundary from '../components/common/error-boundary';
+import Home from '../pages/home';
+import Login from '../pages/login';
+import Form from '../pages/form';
 
 //@ts-ignore
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
-import AppContainer from './AppContainer';
+import AppContainer from '../AppContainer';
 
-/**
- * Main App routes.
- */
 const Routes: React.FC<RouteComponentProps> = (props: RouteComponentProps) => {
   const dispatch = useDispatch();
 
